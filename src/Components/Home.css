@@ -1,0 +1,19 @@
+.typing-text::after {
+  content: "UI/UX Designer | Frontend Developer";
+  animation: typing 4s steps(30) infinite, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  border-right: 2px solid cyan;
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0%, 10% { width: 0 }
+  50%, 60% { width: 100% }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
