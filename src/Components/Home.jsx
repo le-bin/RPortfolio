@@ -29,7 +29,7 @@ const Home = () => {
           </h3>
 
           <a
-            href="/Lebin_Timsina_resume.pdf"
+            href="resumelebin__1_.pdf"
             download
             className="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full transition"
           >
