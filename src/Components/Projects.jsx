@@ -2,6 +2,8 @@ import React from "react";
 import bardaliImg from "../assets/baardali.png";
 import lubroImg from "../assets/Lubropaints.png";
 import foodImg from "../assets/Food ord.png";
+// Import the new image for the travel website
+import travelImg from "../assets/Travels home page.png"; // Make sure this path is correct!
 
 const Projects = () => {
   const projectData = [
@@ -9,10 +11,20 @@ const Projects = () => {
       title: "Bardali Creation Website",
       img: bardaliImg,
       description:
-        "A vibrant website design in Figma for Bardali, an IT-based company located in Itahari, featuring intuitive navigation and responsive layouts tailored for Nepali users.Live with a full case study.",
+        "A vibrant website design in Figma for Bardali, an IT-based company located in Itahari, featuring intuitive navigation and responsive layouts tailored for Nepali users. Live with a full case study.",
       live: "https://bardali.com.np/", // Replace with real link
       caseStudy: "https://www.behance.net/gallery/229661993/Bardali-Case-Study", // Replace with real link
     },
+    // --- NEW TRAVEL WEBSITE PROJECT INSERTED HERE ---
+    {
+      title: "Wanderlust: A Travel Website Re-Design", // Using one of the recommended headings
+      img: travelImg,
+      description:
+        "Designed in Figma, this project delivers an intuitive and visually engaging travel experience, guiding users through destinations and planning their next adventure.",
+      caseStudy:
+        "https://www.behance.net/gallery/230290179/Travels-Service-Case-Study", // <--- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL BEHANCE LINK
+    },
+    // --- END NEW PROJECT ---
     {
       title: "Lubro Paints Website",
       img: lubroImg,
