@@ -2,42 +2,63 @@ import React from "react";
 import bardaliImg from "../assets/baardali.png";
 import lubroImg from "../assets/Lubropaints.png";
 import foodImg from "../assets/Food ord.png";
-// Import the new image for the travel website
-import travelImg from "../assets/Travels home page.png"; // Make sure this path is correct!
+import travelImg from "../assets/Travels home page.png";
+import furnitureImg from "../assets/Hero section.png";
+import eventImg from "../assets/Venues.png";
 
 const Projects = () => {
   const projectData = [
+    // 1) Wanderlust
     {
-      title: "Bardali Creation Website",
-      img: bardaliImg,
-      description:
-        "A vibrant website design in Figma for Bardali, an IT-based company located in Itahari, featuring intuitive navigation and responsive layouts tailored for Nepali users. Live with a full case study.",
-      live: "https://bardali.com.np/", // Replace with real link
-      caseStudy: "https://www.behance.net/gallery/229661993/Bardali-Case-Study", // Replace with real link
-    },
-    // --- NEW TRAVEL WEBSITE PROJECT INSERTED HERE ---
-    {
-      title: "Wanderlust: A Travel Website Re-Design", // Using one of the recommended headings
+      title: "Wanderlust: A Travel Website Re-Design",
       img: travelImg,
       description:
         "Designed in Figma, this project delivers an intuitive and visually engaging travel experience, guiding users through destinations and planning their next adventure.",
       caseStudy:
-        "https://www.behance.net/gallery/230290179/Travels-Service-Case-Study", // <--- IMPORTANT: REPLACE THIS WITH YOUR ACTUAL BEHANCE LINK
+        "https://www.behance.net/gallery/230290179/Travels-Service-Case-Study",
     },
-    // --- END NEW PROJECT ---
+    // 2) Furniture
     {
-      title: "Lubro Paints Website",
-      img: lubroImg,
+      title: "Furniture Store Website",
+      img: furnitureImg,
       description:
-        "A modern Figma design using a bento grid layout, showcasing paint products for Lubro Paints — a local brand based in Itahari, Nepal.",
-      caseStudy: "https://www.behance.net/gallery/226420563/Case-Study", // Replace with real link
+        "A sleek furniture e-commerce website designed in Figma, emphasizing product visibility, minimalistic design, and a smooth shopping experience.",
+      prototype:
+        "https://www.figma.com/proto/pLzAIyywZ3eaLZN9qV53kc/Furniture-site?node-id=1-2&t=tlfi106nDYrY17im-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
     },
+    // 3) Food Ordering
     {
       title: "Food Ordering System",
       img: foodImg,
       description:
         "A MERN-based food ordering web app developed as a group project. Available on GitHub.",
-      github: "https://github.com/Saameerr/Food-ordering-system.git", // Replace with real link
+      github: "https://github.com/Saameerr/Food-ordering-system.git",
+    },
+    // 4) Bardali
+    {
+      title: "Bardali Creation Website",
+      img: bardaliImg,
+      description:
+        "A vibrant website design in Figma for Bardali, an IT-based company located in Itahari, featuring intuitive navigation and responsive layouts tailored for Nepali users. Live with a full case study.",
+      live: "https://bardali.com.np/",
+      caseStudy: "https://www.behance.net/gallery/229661993/Bardali-Case-Study",
+    },
+    // 5) Event Management
+    {
+      title: "Event Management System",
+      img: eventImg,
+      description:
+        "A modern event management platform designed in Figma, focusing on venue booking, schedule management, and seamless user experience.",
+      prototype:
+        "https://www.figma.com/proto/vHRAF1OME3QuwfQG5RaKoD/Party-Palace?node-id=1-14&t=bcwgR9wtmmMKKpJT-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A14",
+    },
+    // 6) Lubro Paints
+    {
+      title: "Lubro Paints Website",
+      img: lubroImg,
+      description:
+        "A modern Figma design using a bento grid layout, showcasing paint products for Lubro Paints — a local brand based in Itahari, Nepal.",
+      caseStudy: "https://www.behance.net/gallery/226420563/Case-Study",
     },
   ];
 
@@ -94,6 +115,16 @@ const Projects = () => {
                   className="px-4 py-2 bg-gray-700 rounded-full text-sm hover:bg-gray-800 transition"
                 >
                   GitHub
+                </a>
+              )}
+              {project.prototype && (
+                <a
+                  href={project.prototype}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-purple-600 rounded-full text-sm hover:bg-purple-700 transition"
+                >
+                  Prototype
                 </a>
               )}
             </div>
