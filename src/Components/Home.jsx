@@ -29,9 +29,22 @@ const Home = () => {
           </h3>
 
           <a
-            href="resumelebin_u2_.pdf"
-            download
+            href="lebinnresume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block mt-4 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full transition"
+            onClick={(e) => {
+              // Force download by creating a temporary link
+              setTimeout(() => {
+                const link = document.createElement("a");
+                link.href = "/resumelebin_u2_.pdf";
+                link.download = "Lebin_Timsina_Resume.pdf";
+                link.target = "_blank";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }, 100);
+            }}
           >
             Download CV
           </a>
